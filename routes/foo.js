@@ -17,7 +17,6 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   const { bar, baz } = req.body;
-  return res.status(422).json({ code: 'unprosessable-entity' });
   if (!bar || !baz) {
     return res.status(422).json({ code: 'unprosessable-entity' });
   }
